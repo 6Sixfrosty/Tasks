@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        section div {
+            border: 1px solid;
+            margin-bottom: 15px;
+        }
+
+        .input_coment {
+            width: 200px;
+            height: 150px;
+        }
+
+        h1 {
+            background-color: rgb(0, 102, 255);
+            width: 300px;
+        }
+
+        .Info,
+        .Locate input {
+            margin-right: 15px;
+        }
+        .Coments{
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de cliente</h1>
+    <h3>Preencha os campos abaixo para registrar seu interesse nos serviços da nossa empresa</h3>
+    <section>
+        <div class="Info">
+            <h3>Informações Pessoais</h3>
+            <label>Nome Completo: </label><input type="text" placeholder="Digite seu nome completo">
+            <label>E-mail: </label><input type="email" placeholder="exemplo@email.com">
+            <label>Crie uma senha: </label><input type="password">
+            <label>Data de Nascimento: </label><input type="date">
+        </div>
+        <div class="Locate">
+            <h3>Contato e localização</h3>
+            <label>Telefone: </label><input type="tel" placeholder="(00) 00000-0000">
+            <label>Cidade: </label><input type="text" placeholder="Digite sua cidade">
+            <label>Estado: </label><select>
+                <option value="">-- Selecione --</option>
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+            </select>
+        </div>
+        <div class="Services">
+            <h3>Preferências de Serviço</h3>
+            <p>Deseja receber novidades por e-mail?</p>
+            <input type="radio"> <label>Sim</label>
+            <input type="radio"><label>Não</label>
+            <p>Selecione os serviços de interesse:</p>
+            <input type="checkbox"><label>Desenvolvimento Web</label>
+            <input type="checkbox"><label>Desing Digital</label>
+            <input type="checkbox"><label>Redes de Computadores</label>
+        </div>
+        <div class="Coments">
+            <p>Comentários</p>
+            <p>Deixe uma mensagem (opcional):</p>
+            <input class="input_coment" type="text" placeholder="Digite suas observações...">
+        </div>
+        <span>
+            <input type="submit" value="Enviar Cadastro"><input type="reset" value="Limpar">
+        </span>
+    </section>
+    <br>
+    <nav>
+        <a href="../index.html">NAVEGAÇÃO</a>
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </nav>
+</body>
+
+</html>
