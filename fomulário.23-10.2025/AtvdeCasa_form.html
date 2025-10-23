@@ -6,27 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <style>
-        section div {
-            border: 1px solid;
-            margin-bottom: 15px;
-        }
-
-        .input_coment {
-            width: 200px;
-            height: 150px;
-        }
-
         h1 {
-            background-color: rgb(0, 102, 255);
-            width: 300px;
+            background-color: #00FFFF;
+            width: 400px;
         }
 
         .Info,
         .Locate input {
             margin-right: 15px;
         }
-        .Coments{
+
+        .Coments {
             margin-bottom: 3px;
+        }
+        #Select_view{
+            text-align: center;
+        }
+        .Coments{
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -34,20 +31,20 @@
 <body>
     <h1>Cadastro de cliente</h1>
     <h3>Preencha os campos abaixo para registrar seu interesse nos serviços da nossa empresa</h3>
-    <section>
-        <div class="Info">
-            <h3>Informações Pessoais</h3>
+    <form>
+        <fieldset class="Info">
+            <legend>Informações Pessoais</legend>
             <label>Nome Completo: </label><input type="text" placeholder="Digite seu nome completo">
             <label>E-mail: </label><input type="email" placeholder="exemplo@email.com">
             <label>Crie uma senha: </label><input type="password">
             <label>Data de Nascimento: </label><input type="date">
-        </div>
-        <div class="Locate">
-            <h3>Contato e localização</h3>
+        </fieldset>
+        <fieldset class="Locate">
+            <legend>Contato e localização</legend>
             <label>Telefone: </label><input type="tel" placeholder="(00) 00000-0000">
             <label>Cidade: </label><input type="text" placeholder="Digite sua cidade">
             <label>Estado: </label><select>
-                <option value="">-- Selecione --</option>
+                <option id="Select_view" value="">------- Selecione -------</option>
                 <option value="AC">Acre (AC)</option>
                 <option value="AL">Alagoas (AL)</option>
                 <option value="AP">Amapá (AP)</option>
@@ -76,9 +73,9 @@
                 <option value="SE">Sergipe (SE)</option>
                 <option value="TO">Tocantins (TO)</option>
             </select>
-        </div>
-        <div class="Services">
-            <h3>Preferências de Serviço</h3>
+        </fieldset>
+        <fieldset class="Services">
+            <legend>Preferências de Serviço</legend>
             <p>Deseja receber novidades por e-mail?</p>
             <input type="radio"> <label>Sim</label>
             <input type="radio"><label>Não</label>
@@ -86,16 +83,16 @@
             <input type="checkbox"><label>Desenvolvimento Web</label>
             <input type="checkbox"><label>Desing Digital</label>
             <input type="checkbox"><label>Redes de Computadores</label>
-        </div>
+        </fieldset>
         <div class="Coments">
             <p>Comentários</p>
             <p>Deixe uma mensagem (opcional):</p>
-            <input class="input_coment" type="text" placeholder="Digite suas observações...">
+            <textarea id="comentario" name="comentario" rows="15" cols="65" placeholder="Digite suas observações..."></textarea>
         </div>
         <span>
             <input type="submit" value="Enviar Cadastro"><input type="reset" value="Limpar">
         </span>
-    </section>
+    </form>
     <br>
     <nav>
         <a href="form_nav.html">NAVEGAÇÃO</a>
