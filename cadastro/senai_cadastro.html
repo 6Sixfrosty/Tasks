@@ -136,7 +136,17 @@
             <br>
             <label for="tel">Telefone:</label>
             <br>
-            <input type="tel" name="tel" pattern="[A-Za-zÀ-ÿ\s]+" required>
+            <input
+  type="tel"
+  inputmode="tel"
+  name="telefone"
+  id="telefone"
+  placeholder="(11) 9 8765-4321"
+  pattern="^\(?\d{2}\)?\s?9\d{4}\-?\d{4}$"
+  maxlength="15"
+  aria-label="telefone"
+  required
+/>
             <br>
             <label for="course">Curso desejado:</label>
             <br>
