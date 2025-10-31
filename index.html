@@ -1,59 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <!--Meta dados do site-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site para armazenar todas as minhas atividades do senai" />
 
-
-
-    <!-- Aparencia da pagina-->
-
-    <!--Titulo da pagina-->
-    <title>Mostruario</title>
-    <!-- icone da pagina -->
+    <title>Mostruário</title>
     <link type="image/png" sizes="120x120" rel="icon" href=".../icons8-ideia-ios7-120.png">
-    <!--cor-->
     <meta name="theme-color" content="#2563eb" />
-    <!--fonte-->
 
-    <!-- icone-->
     <link rel="icon" type="image/png" sizes="16x16" href="icons/icon_idea/icons8-ideia-ios-17-outlined-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon_idea/icons8-ideia-ios-17-outlined-32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons/icon_idea/icons8-ideia-ios-17-outlined-96.png">
-    <!-- Windows Tiles -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/icon_idea/icons8-ideia-ios-17-outlined-150.png">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                Roboto, 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding-top: 50px;
-            gap: 20px;
-            height: 100vh;
-            background-color: whitesmoke;
-
-            th {
-                padding: 5px;
-            }
-
-            a {
-                text-decoration: none;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <h1>Navegação</h1>
-    <table border="1 solid">
+    <table>
         <thead>
             <tr>
                 <th>Atividade</th>
@@ -62,30 +30,50 @@
         </thead>
         <tbody>
             <tr>
-                <th><a href="cadastro/templates/index.html">Cadastro senai</a></th>
-                <th>29/10/2025</th>
+                <td><a href="cadastro/templates/index.html">Cadastro Senai (Envio por E-mail JS)</a></td>
+                <td>29/10/2025</td>
             </tr>
             <tr>
-                <th><a href="fomulário.23-10.2025/form_nav.html">Formulario</a></th>
-                <th>23/10/2025</th>
+                <td><a href="#" onclick="OPENform_nav(); return false;">Formulário</a></td>
+                <td>23/10/2025</td>
             </tr>
             <tr>
-                <th><a href="listas e tabelas.21-10-2025/Lists_and_Tables.html">Tables and lists</a></th>
-                <th>21/10/2025</th>
+                <td><a href="listas e tabelas.21-10-2025/Lists_and_Tables.html">Tables and lists</a></td>
+                <td>21/10/2025</td>
             </tr>
             <tr>
-                <th><a href="biografia.15-10-2025/atv_biografia.html">Biografia</a></th>
-                <th>15/10/2025</th>
+                <td><a href="biografia.15-10-2025/atv_biografia.html">Biografia</a></td>
+                <td>15/10/2025</td>
             </tr>
             <tr>
-                <th><a href="github.10-10-2025/atv_github-1.html">Github</a></th>
-                <th>10/10/2025</th>
+                <td><a href="github.10-10-2025/atv_github-1.html">Github</a></td>
+                <td>10/10/2025</td>
             </tr>
         </tbody>
     </table>
     <hr>
-    <p>Da um follow no meu perfil do GitHub :) → <a href="https://github.com/6Sixfrosty" target="_blank"><i>Meu
-                GitHub</i></a></p>
+    <p>Um followzinho no GitHub deixaria o dev muito feliz :) → <a href="https://github.com/6Sixfrosty" target="_blank">Meu
+                GitHub</a></p>
+
+    <div id="FormNav_PopUp" class="FormNav-box">
+        <div class="FormNav-content">
+            <button class="close-button" onclick="closeModal()">×</button>
+            <h2>Atividades(Formulário)</h2>
+            <div class="FormNav-links">
+                <a href="fomulário.23-10.2025/AtvdeCasa_form.html" class="FormNav_link">Cadastro de Cliente <span class="FormNav_link-atvType">| atv-casa</span></a>
+                <a href="fomulário.23-10.2025/AtvDeSala_form.html" class="FormNav_link">Formulário de Exemplo | atv-sala</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function OPENform_nav() {
+            document.getElementById('FormNav_PopUp').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('FormNav_PopUp').style.display = 'none';
+        }
+    </script>
 </body>
+
 
 </html>

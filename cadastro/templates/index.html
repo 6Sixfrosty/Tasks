@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS_styles/style(index).css') }}">
+    <link rel="stylesheet" href="../CSS_styles/style(index).css">
     
     <title>Inscrição</title>
 </head>
 <body>
-    <a href="#"><button id="nav">VOLTAR</button></a> 
+    <a href="../../index.html"><button id="nav">VOLTAR</button></a> 
     <div class="card">
         <h2>Inscrição</h2>
         
@@ -42,10 +42,11 @@
             </div>
             <input class="input_send" type="submit" value="Enviar Inscrição">
             
-            <a href="{{ url_for('static', filename='templates/jasou.html') }}" class="link">Já e aluno?</a>
+            <a href="jasou.html" class="link">Já e aluno?</a>
         </form>
     </div>
     
-    <script src="{{ url_for('static', filename='scripts/dynamic_select.js') }}"></script>
+    <script src="../scripts/dynamic_select.js"></script>
+    <script src="../scripts/send.js"></script>
 </body>
 </html>

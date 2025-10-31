@@ -2,9 +2,9 @@
     font-family: 'Arial', sans-serif;
     font-weight: 900;
 }
-
 body {
-    background: #2A09F0;
+    background-color: #f0f4f8; 
+    background: linear-gradient(135deg, #d1d5db 60%, #e5e7eb 60%); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,8 @@ body {
 
 .card {
     position: relative;
-    background: ghostwhite;
+    background-color: #ffffff; 
+    background: linear-gradient(135deg, #f7f7f7, #e5e5e5); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,12 +22,13 @@ body {
     width: 400px;
     height: 550px;
     border-radius: 8.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
     position: relative;
     top: 10px;
-    color: #154672;
+    color:#4b5563; 
 }
 
 form {
@@ -45,9 +47,9 @@ form {
     margin-bottom: 10px;
 }
 
-.campo label {
+.campo label ,label{
     font-weight: bold;
-    color: #464751;
+    color: #4b5563; 
 }
 
 .campo input,
@@ -56,16 +58,12 @@ form {
     width: 100%;
 }
 
-label {
-    font-weight: bold;
-    color: #464751;
-}
 
 form input,
 select,
 .coment_block {
     width: 340px;
-    border: 1px solid rgb(185, 185, 185);
+    border: 1px solid #d1d5db; 
     border-radius: 5px;
     margin: 6px 0 8px 0;
 }
@@ -77,8 +75,8 @@ form input {
 select {
     height: 28px;
     padding: 4.5px;
-    background: #fff;
-    color: #464751;
+    background: #ffffff; 
+    color: #1f2937; 
 }
 
 .coment_block {
@@ -88,7 +86,7 @@ select {
     height: 45px;
     margin-top: 5px;
     margin-bottom: 9px;
-    border: 2px solid black;
+    border: 2px solid #9ca3af; 
     border-radius: 5px;
     resize: none;
 }
@@ -96,8 +94,8 @@ select {
 .input_send {
     width: 330px;
     height: 33px;
-    color: ghostwhite;
-    background: #004B8E;
+    color: #ffffff; 
+    background: #0d47a1; 
     cursor: pointer;
 }
 
@@ -107,8 +105,8 @@ select,
 }
 
 .input_send:hover {
-    background-color: black;
-    color: whitesmoke;
+    background-color: #1565c0; 
+    color: #ffffff;
 }
 
 
@@ -117,8 +115,8 @@ select,
     border-radius: 20px;
     padding: 6px;
     font-size: 16.6px;
-    color: ghostwhite;
-    background: #464751;
+    color: #ffffff;
+    background: #4b5563; 
     cursor: pointer;
     position: absolute;
     overflow: hidden;
@@ -133,12 +131,13 @@ select,
     left: 116px;
     text-align: center;
     text-decoration: none;
-    color: #464751;
+    color:#1f2937; 
     border-style: dashed;
     width: fit-content;
     padding: 5px;
+    border-radius: 3px;
 }
 .link:hover{
-    background-color: grey;
-    color: whitesmoke;
+    background-color: #e5e7eb; 
+    color:#1565c0;
 }
