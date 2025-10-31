@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/cadastro")
 def cadastro():
-    return send_file(os.path.join(BASE_DIR, "../index.html"))
+    return send_file(os.path.join(BASE_DIR, "cadastro/index.html"))
 
 @app.route("/enviar_email", methods=["POST"])
 def enviar_email():
