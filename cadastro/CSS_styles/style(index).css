@@ -1,0 +1,144 @@
+* {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+}
+
+body {
+    background: #2A09F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    background: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 550px;
+    border-radius: 8.5px;
+}
+
+h2 {
+    position: relative;
+    top: 10px;
+    color: #154672;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-size: 16.6px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #464751;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    color: #464751;
+}
+
+form input,
+select,
+.coment_block {
+    width: 340px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    margin: 6px 0 8px 0;
+}
+
+form input {
+    height: 23px;
+}
+
+select {
+    height: 28px;
+    padding: 4.5px;
+    background: #fff;
+    color: #464751;
+}
+
+.coment_block {
+    position: relative;
+    left: -0.7px;
+    width: 340px;
+    height: 45px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    border: 2px solid black;
+    border-radius: 5px;
+    resize: none;
+}
+
+.input_send {
+    width: 330px;
+    height: 33px;
+    color: ghostwhite;
+    background: #004B8E;
+    cursor: pointer;
+}
+
+select,
+.input_send {
+    cursor: pointer;
+}
+
+.input_send:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+#nav {
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 16.6px;
+    color: ghostwhite;
+    background: #464751;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    bottom: 10px;
+    left: 20px;
+}
+
+.link{
+    margin-top: 10px;
+    position: relative;
+    bottom: px;
+    left: 116px;
+    text-align: center;
+    text-decoration: none;
+    color: #464751;
+    border-style: dashed;
+    width: fit-content;
+    padding: 5px;
+}
+.link:hover{
+    background-color: grey;
+    color: whitesmoke;
+}

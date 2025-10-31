@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS_styles/style(index).css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <a href="../index.html"><button id="nav">VOLTAR</button></a>
+    <div class="card">
+        <h2>Inscrição SENAI</h2>
+        <form action="conclusion.html">
+            <div class="campo">
+                <label for="name">Nome Completo:</label>
+                <input type="text" name="user_name" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="tel">Telefone:</label>
+                <input type="tel" inputmode="tel" name="telefone" id="telefone" placeholder="(11) 9-8765-4321"
+                    pattern="^\(?\d{2}\)?\s?9\d{4}\-?\d{4}$" maxlength="15" aria-label="telefone" required>
+            </div>
+
+            
+            <div class="campo">
+                <label for="course">Curso desejado:</label>
+                <select name="selected_course" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="tec.info">Técnico em Informática</option>
+                    <option value="tec.elect">Técnico em Eletrônica</option>
+                    <option value="tec.mec">Técnico em Mecânica</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="coment">Observações:</label>
+                <textarea name="coment" class="coment_block"></textarea>
+            </div>
+
+            <input class="input_send" type="submit" value="Enviar Inscrição">
+            <a href="SubPages/jasou.html" class="link">Já e aluno?</a>
+        </form>
+
+    </div>
+</body>
+
+</html>
+
+* {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+}
+
+body {
+    background: #2A09F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    background: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 8.5px;
+}
+
+h2 {
+    position: relative;
+    top: 1.5px;
+    color: #154672;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-size: 16.6px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #464751;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    color: #464751;
+}
+
+form input,
+select,
+.coment_block {
+    width: 340px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    margin: 6px 0 8px 0;
+}
+
+form input {
+    height: 23px;
+}
+
+select {
+    height: 28px;
+    padding: 4.5px;
+    background: #fff;
+    color: #464751;
+}
+
+.coment_block {
+    position: relative;
+    left: -0.7px;
+    width: 340px;
+    height: 45px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    border: 2px solid black;
+    border-radius: 5px;
+    resize: none;
+}
+
+.input_send {
+    width: 330px;
+    height: 33px;
+    color: ghostwhite;
+    background: #004B8E;
+    cursor: pointer;
+}
+
+select,
+.input_send {
+    cursor: pointer;
+}
+
+.input_send:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+#nav {
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 16.6px;
+    color: ghostwhite;
+    background: #464751;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    bottom: 10px;
+    left: 20px;
+}
+
+.link{
+    position: relative;
+    bottom: -5px;
+    text-align: center;
+}
+
+  <div class="campo">
+                <label for="tel">Telefone:</label>
+                <input type="tel" inputmode="tel" name="telefone" id="telefone" placeholder="(11) 9-8765-4321"
+                    pattern="^\(?\d{2}\)?\s?9\d{4}\-?\d{4}$" maxlength="15" aria-label="telefone" required>
+            </div>

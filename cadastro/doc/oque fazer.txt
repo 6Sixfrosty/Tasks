@@ -1,0 +1,35 @@
+1. Remover o campo de observações.
+2. Oferecer ao usuário a escolha de **um polo** entre duas opções:
+   - Senai Santo Amaro
+   - Senai Areias
+3. Cada polo deve ter **5 cursos diferentes** disponíveis para seleção.
+4. O usuário deve escolher **um polo** e **um curso correspondente ao polo**.
+5. Ao enviar o formulário:
+   - Enviar um **e-mail para o usuário**.
+   - O e-mail deve conter:
+     - Uma **imagem do curso escolhido**
+     - Um **texto explicativo sobre o polo e o curso**
+
+**Requisitos técnicos:**
+
+- O formulário deve ser HTML com `<select>` para polos e cursos.
+- O envio será feito via **POST** para um backend em **Python/Flask**.
+- O backend deve gerar o e-mail automaticamente, preenchendo os dados do curso e polo selecionados.
+
+---
+
+Jasoualuno.html:
+
+- Deve ter um **redirecionamento automático de 3 segundos** para a página do aluno:  
+  https://sge.pe.senai.br/framehtml/Web/App/Edu/PortalEducacional/login/
+- Deve ter um **botão de voltar**.
+
+---
+
+Ao enviar o formulário:
+
+- Enviar um **e-mail para o usuário**.
+- O e-mail deve conter:
+  - Uma **imagem do curso escolhido**
+  - Um **texto explicativo sobre o polo e o curso**
+  - Um **link de redirecionamento** com os dados inseridos no index.html, levando à página de enriquecimento de dados (`enrichment.html`).
