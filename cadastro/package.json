@@ -1,0 +1,13 @@
+{
+  "name": "inscricao-senai-backend",
+  "version": "1.0.0",
+  "description": "Função Serverless para envio de email via Nodemailer.",
+  "main": "api/enviar_email.js",
+  "scripts": {
+    "start": "echo 'Serverless function entry point'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+}
+}
+ 
