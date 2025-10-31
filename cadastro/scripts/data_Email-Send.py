@@ -1,14 +1,14 @@
-from flask import Flask, request, send_file
+# cadastro/scripts/data_Email-Send.py
+from flask import Flask, request, render_template
 import yagmail
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates")
 yag = yagmail.SMTP(os.environ["GMAIL_USER"], os.environ["GMAIL_PASS"])
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/cadastro")
+@app.route("/cadastro", methods=["GET"])
 def cadastro():
-    return send_file(os.path.join(BASE_DIR, "cadastro/index.html"))
+    return render_template("index.html")
 
 @app.route("/enviar_email", methods=["POST"])
 def enviar_email():
@@ -24,7 +24,7 @@ def enviar_email():
 
     yag.send(to=email, subject=subject, contents=[text_content, html_content])
 
-    return send_file(os.path.join(BASE_DIR, "../SubPages/conclusion.html"))
+    return render_template("conclusion.html")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

@@ -1,38 +1,29 @@
+<!-- cadastro/templates/index.html -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS_styles/style(index).css">
-
-    <title>Document</title>
-
+    <link rel="stylesheet" href="../CSS_styles/style(index).css">
+    <title>Inscrição</title>
 </head>
-
 <body>
     <a href="../index.html"><button id="nav">VOLTAR</button></a>
     <div class="card">
         <h2>Inscrição</h2>
-        <form action="https://tasks-mimz.onrender.com/enviar_email" method="POST">
-
-
-
+        <form action="/enviar_email" method="POST">
             <div class="campo">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
             </div>
-
             <div class="campo">
                 <label for="surname">Sobrenome:</label>
                 <input type="text" id="surname" name="surname" required>
             </div>
-
             <div class="campo">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-
             <div class="campo">
                 <label for="unit">Escolha uma de nossas unidades:</label>
                 <select name="unit" id="unit">
@@ -41,20 +32,16 @@
                     <option value="santo_amaro">Santo Amaro</option>
                 </select>
             </div>
-
             <div class="campo">
                 <label for="course">Curso desejado:</label>
                 <select name="course" id="course" required disabled>
                     <option value="" hidden>Selecione...</option>
                 </select>
             </div>
-
             <input class="input_send" type="submit" value="Enviar Inscrição">
-            <a href="SubPages/jasou.html" class="link">Já e aluno?</a>
+            <a href="jasou.html" class="link">Já e aluno?</a>
         </form>
     </div>
-    <script src="scripts/dynamic_select.js"></script>
+    <script src="../scripts/dynamic_select.js"></script>
 </body>
-
-
 </html>
