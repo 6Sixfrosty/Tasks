@@ -4,11 +4,11 @@ import os
 
 app = Flask(__name__)
 yag = yagmail.SMTP(os.environ["GMAIL_USER"], os.environ["GMAIL_PASS"])
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/cadastro")
 def cadastro():
-    return send_file(os.path.join(BASE_DIR, "cadastro/index.html"))
+    return send_file(os.path.join(BASE_DIR, "../index.html"))
 
 @app.route("/enviar_email", methods=["POST"])
 def enviar_email():
@@ -24,8 +24,8 @@ def enviar_email():
 
     yag.send(to=email, subject=subject, contents=[text_content, html_content])
 
-    return send_file(os.path.join(BASE_DIR, "cadastro/SubPages/conclusion.html"))
+    return send_file(os.path.join(BASE_DIR, "../SubPages/conclusion.html"))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port)
