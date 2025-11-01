@@ -1,0 +1,53 @@
+Matricula
+
+1. Dados pessoais
+    - Nome completo
+
+    - CPF
+
+    - RG
+
+    - Genero
+
+    - Estado Civil
+
+    - Nacionalidade
+
+    - Naturalidade
+
+
+2. Endereço
+    - Logradouro
+
+    - Numero
+
+    - Complemento
+
+    - Bairro
+
+    - Cidade
+
+    - Uf
+
+    - Cep
+
+
+3. Contato
+    - Celular
+
+    - Telefone
+
+    - Whatsapp
+
+    - Linkedin
+
+4. (Opcional) Possui CNH? ao selecionar o input:radio(sim) 
+Vai aparecer
+Categoria (A-B-C-D-E) com checkbox
+Tipo sanguíneo
+CPD(radio)
+Observação(campo)
+
+input:submit[value="Concluir Matricula"]
+input:reset[value= "Limpar"]
+<a href"senaiPE">SAIR</a>

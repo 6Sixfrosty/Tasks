@@ -30,10 +30,8 @@ form.addEventListener('submit', async function (e) {
         if (response.ok && result.success) {
 
 
-            alert('✅ Inscrição enviada com sucesso! Você será redirecionado para a próxima etapa.');
+            alert("Inscrição enviada para o seu e-mail com sucesso!\nAcesse sua caixa de entrada para mais informações, e realizar sua matrícula.");
 
-
-            const REDIRECT_URL = "https://6sixfrosty.github.io/Tasks/cadastro/templates/DataEnrichment.html";
             window.location.href = REDIRECT_URL;
 
             form.reset();

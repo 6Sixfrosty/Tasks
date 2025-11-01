@@ -4,28 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Moderno Dinâmico</title>
     <link rel="stylesheet" href="../CSS_styles/style(DataEnrichment).css">
-    <title>Conclusão</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-weight: bold;
-            text-transform: uppercase;
-            background-color: #f0f4f8;
-            background: linear-gradient(135deg, #d1d5db 50%, #e5e7eb 50%);
-            color: #4b5563;;
-        }
-        span:hover{
-            color: black;
-        }
-    </style>
 </head>
 
 <body>
-    <span><H1>Site em desenvolvimento</H1></span>
+    <main>
+        <div class="header">
+            <h1>Formulário de Matrícula</h1>
+        </div>
+        <hr class="header-divider">
+
+        <div class="Div_form">
+            <form action="">
+
+                <section class="form-section Personal_data" id="personal-data-section">
+                    <h2>Dados Pessoais</h2>
+                    <hr class="header-divider">
+
+                    <div class="Personal_data-field field-group required">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" placeholder="Nome" required>
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="rg">RG</label>
+                        <input type="text" id="rg" name="rg">
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="genero">Gênero</label>
+                        <select id="genero" name="genero">
+                            <option value="" disabled selected>Selecione o Gênero</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Nao_Binario">Não binário</option>
+                            <option value="Outro">Outro (especificar)</option>
+                            <option value="Prefiro_Nao_Informar">Prefiro não informar</option>
+                        </select>
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="estado_civil">Estado civil</label>
+                        <select name="estado_civil" id="estado_civil">
+                            <option value="" disabled selected>Selecione o seu Estado Civil</option>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                        </select>
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="nacionalidade">Nacionalidade</label>
+                        <select id="nacionalidade" name="nacionalidade">
+                            <option value="" disabled selected>Selecione a Nacionalidade</option>
+                            <option value="Brasil">Brasileira</option>
+                            <option value="Portugal">Portuguesa</option>
+                            <option value="Outra">Outra</option>
+                        </select>
+                    </div>
+
+                    <div class="Personal_data-field">
+                        <label for="naturalidade">Naturalidade</label>
+                        <select id="naturalidade" name="naturalidade" disabled>
+                            <option value="" disabled selected>Selecione primeiro a Nacionalidade</option>
+                        </select>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" class="btn-clear" onclick="clearSection('personal-data-section')">Limpar</button>
+                        <button type="button" class="btn-next" onclick="navigateSection('personal-data-section', 'address-section')">Próximo &rarr;</button>
+                    </div>
+                </section>
+
+                <section class="form-section Address" id="address-section" style="display: none;">
+                    <h2>Endereço</h2>
+                    <hr class="header-divider">
+                    <div class="Address_field field-group required">
+                        <label for="logradouro">Endereço *</label>
+                        <input type="text" id="logradouro" name="logradouro" placeholder="Rua" required>
+                        <input type="text" id="complemento" name="complemento" placeholder="Complemento(Opcional)">
+                    </div>
+                    
+                    <div class="Address_field field-group">
+                        <div class="two-columns">
+                            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+                            <input type="text" id="uf" name="uf" maxlength="2" placeholder="Estado">
+                        </div>
+                    </div>
+
+                    <div class="Address_field">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                    </div>
+                    
+                    <div class="Address_field">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" required>
+                    </div>
+                    
+                    <div class="Address_field">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" placeholder="Opcional">
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" class="btn-back" onclick="navigateSection('address-section', 'personal-data-section')">&larr; Voltar</button>
+                        <button type="button" class="btn-clear" onclick="clearSection('address-section')">Limpar</button>
+                        <button type="button" class="btn-next" onclick="navigateSection('address-section', 'contact-section')">Próximo &rarr;</button>
+                    </div>
+                </section>
+
+                <section class="form-section Contact" id="contact-section" style="display: none;">
+                    <h2>Contato</h2>
+                    <hr class="header-divider">
+
+                    <div class="Contact-field">
+                        <label for="celular">Número de Telefone</label>
+                        <input type="tel" id="celular" name="celular" placeholder="(00) 0 0000-0000" required>
+                    </div>
+
+                    <div class="Contact-field">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 0 0000-0000" required>
+                    </div>
+
+                    <div class="Address_field required">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+                    </div>
+
+                    <div class="Contact-field">
+                        <label for="linkedin">LinkedIn (URL)</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="Opcional">
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button type="button" class="btn-back" onclick="navigateSection('contact-section', 'address-section')">&larr; Voltar</button>
+                        <button type="button" class="btn-clear" onclick="clearSection('contact-section')">Limpar</button>
+                        <button type="submit" class="btn-submit">Finalizar</button>
+                    </div>
+                </section>
+
+            </form>
+        </div>
+    </main>
+<script src="../scripts/dynamicPage.js"></script>
 </body>
 
 </html>

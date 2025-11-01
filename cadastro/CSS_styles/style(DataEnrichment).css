@@ -1,8 +1,213 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --background-light: #f4f6f9;
+    --border-default: #ced4da;
+    --text-dark: #343a40;
+    --shadow-subtle: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
 * {
     font-family: 'Arial', sans-serif;
-    font-weight: 900;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-light);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 650px;
+    box-shadow: var(--shadow-subtle);
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.header-divider {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 15px 0;
+}
+
+.header h1 {
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Personal_data-field {
+    margin-bottom: 25px;
+}
+
+.Address_field {
+    margin-bottom: 25px;
+}
+
+.Contact-field {
+    margin-bottom: 25px;
+}
+
+.Personal_data-field label,
+.Address_field label,
+.Contact-field label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+
+.Personal_data-field.required label::after,
+.Address_field.required label::after {
+    content: ' *';
+    color: var(--primary-color);
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select {
+    padding: 10px 12px;
+    border: 1px solid var(--border-default);
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #fff;
+    appearance: none;
+}
+
+select{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+/*
+seta do select
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+*/
+
+select:disabled {
+    background-color: #e9ecef;
+    color: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+
+input:focus,
+select:focus {
+    /* Adicionado select:focus */
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Layout de Duas Colunas (Mantendo Float) */
+.two-columns {
+    overflow: auto;
+    margin-bottom: 5px;
+}
+
+.two-columns input,
+.two-columns select {
+    /* Ajustado para incluir select */
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 0;
+}
+
+.two-columns input:last-child,
+.two-columns select:last-child {
+    margin-right: 0;
+}
+
+/* Mensagem pequena */
+.Address_field small {
+    font-size: 12px;
+    color: var(--secondary-color);
+    margin-top: 5px;
+    display: block;
+}
+
+/* Estilo da Seção de Botões */
+.navigation-buttons {
+    margin-top: 30px;
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+    text-align: right;
+}
+
+/* Posicionamento do Botão Voltar (com float) */
+.btn-back {
+    float: left;
+}
+
+/* Estilo Comum dos Botões */
+.btn-next,
+.btn-back,
+.btn-clear,
+.btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+/* Cores dos Botões Modernas */
+.btn-next {
+    background-color: var(--primary-color);
+}
+
+.btn-back {
+    background-color: var(--secondary-color);
+}
+
+.btn-clear {
+    background-color: var(--warning-color);
+    color: var(--text-dark);
+}
+
+.btn-submit {
+    background-color: var(--success-color);
+}
+
+/* Estilos de Hover Simples com Opacidade */
+.btn-next:hover,
+.btn-submit:hover,
+.btn-back:hover,
+.btn-clear:hover {
+    opacity: 0.9;
 }
