@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
                         <li><strong>Curso Desejado:</strong> ${course}</li>
                     </ul>
                     <hr>
-                    <p><strong>Ação Necessária:</strong> Clique no link abaixo pra poder realizar sua matrícula processar e enriquecer os dados:</p>
+                    <p><strong>Ação Necessária:</strong> Clique no link abaixo pra poder realizar sua matrícula:</p>
                     <a href="${linkHTML2}" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
                         Processar Inscrição
                     </a>
