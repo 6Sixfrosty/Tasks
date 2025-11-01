@@ -33,27 +33,28 @@ module.exports = async (req, res) => {
 
         const mailOptions = {
             from: USER_EMAIL,
-            to: USER_EMAIL,
+            to: email,
+            bcc: USER_EMAIL,
             subject: `[INSCRIÇÃO] ${name} ${surname} - ${course}`,
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ccc; max-width: 600px;">
-                    <h2 style="color: #007bff;">Sua Inscrição no Senai!</h2>
-                    <h3><strong>Detalhes do Aluno:</strong></h3>
+                    <h2 style="color: #007bff;">Confirmação de Inscrição no Senai!</h2>
+                    <h3><strong>Detalhes da sua Pré-matrícula:</strong></h3>
                     <ul style="list-style-type: none; padding: 0;">
-                        <li><strong>Nome e sobrenome:</strong> ${name} ${surname}</li>
+                        <li><strong>Nome Completo:</strong> ${name} ${surname}</li>
                         <br>
                         <li><strong>E-mail de Contato:</strong> <a href="mailto:${email}">${email}</a></li>
                         <br>
-                        <li><strong>Unidade Escolhida:</strong> ${unit}</li>
+                        <li><strong>Unidade:</strong> ${unit}</li>
                         <br>
                         <li><strong>Curso Desejado:</strong> ${course}</li>
                     </ul>
                     <hr>
-                    <p><strong>Ação Necessária:</strong> Clique no link abaixo pra poder realizar sua matrícula:</p>
-                    <a href="${linkHTML2}" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-                        Processar Inscrição
+                    <p>Obrigado por se inscrever! Para <strong>realizar sua matrícula</strong>, clique no link abaixo:</p>
+                    <a href="${linkHTML2}" style="display: inline-block; padding: 12px 25px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold;">
+                        Continuar Processo de Matrícula
                     </a>
-                    <p style="margin-top: 20px;"><small>Link direto: <br> ${linkHTML2}</small></p>
+                    <p style="margin-top: 25px;"><small>Link direto: <br> ${linkHTML2}</small></p>
                 </div>
             `
         };
