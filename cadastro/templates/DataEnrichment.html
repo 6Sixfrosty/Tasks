@@ -76,8 +76,11 @@
                     </div>
 
                     <div class="navigation-buttons">
-                        <button type="button" class="btn-clear" onclick="clearSection('personal-data-section')">Limpar</button>
-                        <button type="button" class="btn-next" onclick="navigateSection('personal-data-section', 'address-section')">Próximo &rarr;</button>
+                        <button type="button" class="btn-clear"
+                            onclick="clearSection('personal-data-section')">Limpar</button>
+                        <button type="button" class="btn-next"
+                            onclick="navigateSection('personal-data-section', 'address-section')">Próximo
+                            &rarr;</button>
                     </div>
                 </section>
 
@@ -89,11 +92,11 @@
                         <input type="text" id="logradouro" name="logradouro" placeholder="Rua" required>
                         <input type="text" id="complemento" name="complemento" placeholder="Complemento(Opcional)">
                     </div>
-                    
+
                     <div class="Address_field field-group">
                         <div class="two-columns">
                             <input type="text" id="cidade" name="cidade" placeholder="Cidade">
-                            <input type="text" id="uf" name="uf" maxlength="2" placeholder="Estado">
+                            <input type="text" id="uf" name="uf" maxlength="20" placeholder="Estado">
                         </div>
                     </div>
 
@@ -101,21 +104,24 @@
                         <label for="bairro">Bairro</label>
                         <input type="text" id="bairro" name="bairro" required>
                     </div>
-                    
+
                     <div class="Address_field">
                         <label for="cep">CEP</label>
                         <input type="text" id="cep" name="cep" required>
                     </div>
-                    
+
                     <div class="Address_field">
                         <label for="numero">Número</label>
                         <input type="text" id="numero" name="numero" placeholder="Opcional">
                     </div>
 
                     <div class="navigation-buttons">
-                        <button type="button" class="btn-back" onclick="navigateSection('address-section', 'personal-data-section')">&larr; Voltar</button>
-                        <button type="button" class="btn-clear" onclick="clearSection('address-section')">Limpar</button>
-                        <button type="button" class="btn-next" onclick="navigateSection('address-section', 'contact-section')">Próximo &rarr;</button>
+                        <button type="button" class="btn-back"
+                            onclick="navigateSection('address-section', 'personal-data-section')">&larr; Voltar</button>
+                        <button type="button" class="btn-clear"
+                            onclick="clearSection('address-section')">Limpar</button>
+                        <button type="button" class="btn-next"
+                            onclick="navigateSection('address-section', 'contact-section')">Próximo &rarr;</button>
                     </div>
                 </section>
 
@@ -144,16 +150,18 @@
                     </div>
 
                     <div class="navigation-buttons">
-                        <button type="button" class="btn-back" onclick="navigateSection('contact-section', 'address-section')">&larr; Voltar</button>
-                        <button type="button" class="btn-clear" onclick="clearSection('contact-section')">Limpar</button>
-                        <button type="submit" class="btn-submit">Finalizar</button>
+                        <button type="button" class="btn-back"
+                            onclick="navigateSection('contact-section', 'address-section')">&larr; Voltar</button>
+                        <button type="button" class="btn-clear"
+                            onclick="clearSection('contact-section')">Limpar</button>
+                        <input type="submit" class="btn-submit" value="Finalizar">
                     </div>
                 </section>
 
             </form>
         </div>
     </main>
-<script src="../scripts/dynamicPage.js"></script>
+    <script src="../scripts/dynamicPage.js"></script>
 </body>
 
 </html>
