@@ -1,6 +1,6 @@
 const form = document.getElementById('form1');
 const API_URL = '/api/enviar_email';
-
+const REDIRECT_URL = 'https://www.pe.senai.br/';
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
