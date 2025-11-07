@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0D1117;
+}
+
+.container {
+    position: relative;
+    top: -60px;
+    background-color: #1E1E2E;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 95%;
+}
+h2 {
+    color: #89B4FA;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+}
+
+hr {
+    display: block;
+    border: none;
+    height: 3px;
+    width: 70%;
+    margin: 10px auto 20px auto;
+    background-color: #89B4FA;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+/* Display */
+.display {
+    margin-top: 40px;
+    position: relative;
+    top: -50px;
+    text-align: end;
+    background-color: #1E1E2E;
+    color: #DDE1E7;
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    padding: 30px;
+}
+
+/*
+cores claras
+
+background-color: #E9E9ED;  cinza-claro neutro 
+
+background-color: #F2F2F5;  branco levemente acinzentado 
+
+background-color: #DDE1E7;  frosted”
+
+background-color: #1E1E2E; cor de fundo 
+*/
+
+.display:focus {
+    outline: none;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex: 2;
+}
+
+.funcoes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    flex: 1;
+}
+
+button {
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3f4061;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #46495e; 
+    color: #DDE1E7;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #585B70; 
+    transform: translateY(0);
+}
+
+.header, button{
+    user-select: none;
+}
